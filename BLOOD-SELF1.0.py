@@ -154,7 +154,7 @@ def startprint():
     print()
     print(f'{Fore.RED}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}')
     print()
-    print(f'{Fore.RED}!!!USE FOR UR OWN RISK!!! ')
+    print(f'{Fore.RED}⚠DEMO MODE ENABLED ⚠ ')
     print(f'{Fore.GREEN}{time4logs()} | INFO | Logged as {client.user}{Fore.RESET}')
     print(f'{Fore.GREEN}{time4logs()} | INFO | Selfbot running with version {Selfbot.__version__}{Fore.RESET}')
     
@@ -402,9 +402,8 @@ async def stopspam(ctx):
 
 @client.command()
 async def destroy(ctx):
-   await ctx.message.add_reaction('✅')
-   await ctx.send(f"""```\n Nuker started...✅```""")
-   Popen('python BLOOD-ServerNuker.py')
+   await ctx.message.add_reaction('⚠️')
+   await ctx.send(f"""```\n Nuker do not avaiable in demo mode...⚠️```""")
    os.system('CLS')
 
 @client.command()
@@ -481,8 +480,7 @@ os.system('CLS')
 
 @client.command()    
 async def nitrogen(ctx):
-	 await ctx.send(f"""```BLOOD-SELF\n\nNitro generator runned...✅```""")
-	 Popen('python Gen.py')
+	 await ctx.send(f"""```BLOOD-SELF\n\nNitro generator disabled in demo mode...⚠️```""")
 	 os.system('CLS')
 	 
 @client.command()

